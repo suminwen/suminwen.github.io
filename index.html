@@ -185,9 +185,24 @@
     <article id="post-FIND_IN_SET" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/27/FIND_IN_SET/">mysql中find_in_set()函数的使用</a>
+    </h1>
+  
+
+        
+        <a href="/2021/10/27/FIND_IN_SET/" class="archive-article-date">
+  	<time datetime="2021-10-27T02:26:07.958Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-27</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="title-mysql中find-in-set-函数的使用"><a href="#title-mysql中find-in-set-函数的使用" class="headerlink" title="title: mysql中find_in_set()函数的使用"></a>title: mysql中find_in_set()函数的使用</h3><p>首先举个例子来说：<br>有个文章表里面有个type字段，它存储的是文章类型，有 1头条、2推荐、3热点、4图文等等 。<br>现在有篇文章他既是头条，又是热点，还是图文，type中以 1,3,4 的格式存储。那我们如何用sql查找所有type中有4的图文类型的文章呢？？<br>这就要我们的 find_in_set 出马的时候到了。以下为引用的内容：</p>
+        <p>首先举个例子来说：<br>有个文章表里面有个type字段，它存储的是文章类型，有 1头条、2推荐、3热点、4图文等等 。<br>现在有篇文章他既是头条，又是热点，还是图文，type中以 1,3,4 的格式存储。那我们如何用sql查找所有type中有4的图文类型的文章呢？？<br>这就要我们的 find_in_set 出马的时候到了。以下为引用的内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from article where FIND_IN_SET(&#x27;4&#x27;,type)</span><br></pre></td></tr></table></figure>
 
 <p>-———————————————————<br><strong>MySQL手册中find_in_set函数的语法：</strong><br>FIND_IN_SET(str,strlist)</p>
