@@ -8,13 +8,27 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Su</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="title: mysql中find_in_set()函数的使用首先举个例子来说：有个文章表里面有个type字段，它存储的是文章类型，有 1头条、2推荐、3热点、4图文等等 。现在有篇文章他既是头条，又是热点，还是图文，type中以 1,3,4 的格式存储。那我们如何用sql查找所有type中有4的图文类型的文章呢？？这就要我们的 find_in_set 出马的时候到了。以下为引用的内容： 1sel">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Su">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/10/27/FIND_IN_SET/index.html">
 <meta property="og:site_name" content="Su">
+<meta property="og:description" content="title: mysql中find_in_set()函数的使用首先举个例子来说：有个文章表里面有个type字段，它存储的是文章类型，有 1头条、2推荐、3热点、4图文等等 。现在有篇文章他既是头条，又是热点，还是图文，type中以 1,3,4 的格式存储。那我们如何用sql查找所有type中有4的图文类型的文章呢？？这就要我们的 find_in_set 出马的时候到了。以下为引用的内容： 1sel">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/249993/201609/249993-20160920213558715-1931077652.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/249993/201609/249993-20160921001750731-486093364.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/249993/201609/249993-20160921001815684-828184073.png">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/249993/201609/249993-20160921004321215-1374990584.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/249993/201609/249993-20160921004636043-1677344596.png">
+<meta property="article:published_time" content="2021-10-27T02:26:07.958Z">
+<meta property="article:modified_time" content="2021-10-27T02:26:07.966Z">
 <meta property="article:author" content="su">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://common.cnblogs.com/images/copycode.gif">
   
     <link rel="alternative" href="/atom.xml" title="Su" type="application/atom+xml">
   
@@ -180,9 +194,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-FIND_IN_SET" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-FIND_IN_SET" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -243,6 +255,32 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/suminwen/suminwen.github.io/master/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -250,16 +288,76 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/27/FIND_IN_SET/">展开全文 >></a>
-        </p>
+
       
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://suminwen.github.io/2021/10/27/FIND_IN_SET/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/10/27/MysqlRestPwd/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">重置MySQL密码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -279,364 +377,14 @@
 
 
 
-
   
-    <article id="post-MysqlRestPwd" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/27/MysqlRestPwd/">重置MySQL密码</a>
-    </h1>
   
 
-        
-        <a href="/2021/10/27/MysqlRestPwd/" class="archive-article-date">
-  	<time datetime="2021-10-27T02:12:52.360Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当忘记MySQL密码时可以通过如下方法重置密码。（注意时windows环境下）</p>
-<p><strong>停止MySQL服务</strong></p>
-<p>​                net stop mysql               </p>
-<p><strong>无密码启动</strong></p>
-<p>​                mysqld –console –skip-grant-tables –shared-memory               </p>
-<p><strong>重新开一个dos窗口，无密码登陆进入，清空密码</strong></p>
-<p>​                mysql -u root  update mysql.user set authentication_string=’’ where user=’root’ and host=’localhost’;               </p>
-<p><strong>退出刚刚开启的2个dos窗口程序，重新打开一个dosc窗口，重启MySQL</strong></p>
-<p>​                mysql start mysql               </p>
-<p><strong>再次无密码登陆进入，重新设置密码</strong></p>
-<p>​                mysql -u root # 切换到MySQL库 use mysql; # 设置密码 ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘新密码’; # 刷新权限 FLUSH PRIVILEGES; # 退出     quit;               </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/27/MysqlRestPwd/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-scoop" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/26/scoop/">Windows安装Scoop神器</a>
-    </h1>
   
 
-        
-        <a href="/2021/10/26/scoop/" class="archive-article-date">
-  	<time datetime="2021-10-26T07:41:34.964Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Windows上安装软件的痛点"><a href="#Windows上安装软件的痛点" class="headerlink" title="Windows上安装软件的痛点"></a>Windows上安装软件的痛点</h3><p>通常在Windows平台上下载软件分为以下几个步骤：百度搜软件，下载安装程序，不断点击下一步直到安装完成</p>
-<p>不仅安装繁琐，路径不统一，而且更新卸载麻烦，而包管理系统，就可以完美的解决这些问题</p>
-<hr>
-<blockquote>
-<p>在Linux上有yum、dnf、apt包管理器，苹果上brew包管理器，那么在Windows同样应该需要一款包管理器</p>
-</blockquote>
-<h3 id="解决了哪些问题"><a href="#解决了哪些问题" class="headerlink" title="解决了哪些问题"></a>解决了哪些问题</h3><ul>
-<li>权限弹出窗口</li>
-<li>GUI向导式安装程序</li>
-<li>安装大量程序造成的路径污染</li>
-<li>安装和卸载程序产生的意外副作用</li>
-<li>查找和安装依赖项的需要</li>
-<li>需要执行额外的设置步骤才能获得有效的程序</li>
-</ul>
-<hr>
-<h3 id="目前比较流行的两款包管理平台"><a href="#目前比较流行的两款包管理平台" class="headerlink" title="目前比较流行的两款包管理平台"></a>目前比较流行的两款包管理平台</h3><ul>
-<li>chocolatey 和 scoop</li>
-<li>windows官方的winget</li>
-</ul>
-<blockquote>
-<p>这里不推荐使用chocolatey(软件安装路径默认在C盘)<br>scoop自由度高，可以将软件部署到任意盘中</p>
-</blockquote>
-<hr>
-<h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><ul>
-<li><p>官方网址:</p>
-<p><a target="_blank" rel="noopener" href="https://scoop.sh/">https://scoop.sh</a></p>
-</li>
-<li><p><strong>官方快速入门:</strong><br><a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop/wiki/Quick-Start">https://github.com/lukesampson/scoop/wiki/Quick-Start</a></p>
-</li>
-<li><p><strong>小新scoop仓库:</strong></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/echoiron/echo-scoop">https://github.com/echoiron/echo-scoop</a></p>
-</li>
-<li><p>环境要求：</p>
-<p>Windows7及以上版本<br>PowerShell 5及以上版本</p>
-</li>
-</ul>
-<hr>
-<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p><strong>获取Powershell权限</strong></p>
-<blockquote>
-<p>执行成功的标志是命令行首是否有”PS”</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$psversiontable</span>.psversion.major</span><br><span class="line">set-executionpolicy remotesigned -scope currentuser</span><br></pre></td></tr></table></figure>
-
-<p>Bash</p>
-<p>Copy</p>
-<p><strong>自定义scoop包安装路径运行下方三行代码</strong></p>
-<blockquote>
-<p><code>D:\scoop</code>表示scoop包管理路径,可以随意定义,建议不要放在C盘就好</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$env</span>:SCOOP=<span class="string">&#x27;D:\scoop&#x27;</span></span><br><span class="line">[environment]::setEnvironmentVariable(<span class="string">&#x27;SCOOP&#x27;</span>,<span class="variable">$env</span>:SCOOP,<span class="string">&#x27;User&#x27;</span>)</span><br><span class="line">iwr -useb get.scoop.sh | iex</span><br></pre></td></tr></table></figure>
-
-<p>Bash</p>
-<p>Copy</p>
-<p>4.<strong>Scoop使用方法</strong></p>
-<ul>
-<li><p>帮助语法</p>
-<p><code>scoop help</code></p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<hr>
-<ul>
-<li><p>安装操作</p>
-<p><code>scoop install 软件名</code></p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<hr>
-<ul>
-<li><p>安装指定版本</p>
-<p><code>scoop install python@3.7.9</code></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>安装指定Bucket应用</p>
-<p><code>scoop install extras/sumatrapdf</code></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>更新bucket库</p>
-<p><code>scoop update</code></p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<hr>
-<ul>
-<li><p>更新所有已安装应用</p>
-<p><code>scoop update *</code></p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<hr>
-<ul>
-<li><p>移除所有旧版本</p>
-<p><code>scoop cleanup *</code></p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<hr>
-<ul>
-<li><p>卸载操作</p>
-<p><code>scoop uninstall 软件名</code></p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<hr>
-<ul>
-<li><p>常用软件表</p>
-<p>01.aria2：<code>scoop install aria2</code><br>02.wget：<code>scoop install wget</code><br>03.everything：<code>scoop install everything</code><br>04.cmder：<code>scoop install cmder</code><br>05.notepad2：<code>scoop install echo/notepad2</code><br>06.q-dir：<code>scoop install q-dir</code><br>07.vim：<code>scoop install vim</code><br>08.keepass：<code>scoop install keepass</code><br>09.chrome：<code>scoop install googlechrome</code><br>10.firefox：<code>scoop install firefox</code><br>11.vivaldi：<code>scoop install vivaldi</code><br>12.opera：<code>scoop install opera</code><br>13.python：<code>scoop install python</code><br>14.nodejs：<code>scoop install nodejs</code><br>15.go：<code>scoop install go</code><br>16.trafficmonitor：<code>scoop install trafficmonitor</code><br>17.notepadplusplus：<code>scoop install notepadplusplus</code><br>18.sublime-text：<code>scoop install sublime-text</code><br>19.vscode：<code>scoop install vscode</code><br>20.pycharm：<code>scoop install pycharm</code><br>21.intellij-idea：<code>scoop install intellij-idea</code><br>22.goland：<code>scoop install goland</code><br>23.fscapture：<code>scoop install echo/fscapture</code><br>24.snipaste：<code>scoop install snipaste</code><br>25.synctrayzor：<code>scoop install synctrayzor</code><br>26.telegram：<code>scoop install telegram</code><br>27.notion：<code>scoop install notion</code><br>28.typora：<code>scoop install typora</code></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>导出软件列表</p>
-<p><code>scoop list &gt; %HOMEPATH%\Desktop\applist.txt</code></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>版本切换</p>
-<p><code>scoop reset python</code><br><code>scoop reset python27</code></p>
-</li>
-</ul>
-<hr>
-<p>5.<strong>bucket软件库</strong></p>
-<p>scoop所有软件的安装都是由bucket支持，因此添加上几个主要的bucket基本可以下载网络上常用的应用软件</p>
-<ul>
-<li><p>社区地址：</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/rasa/scoop-directory/blob/master/by-score.md">https://github.com/rasa/scoop-directory/blob/master/by-score.md</a></p>
-</li>
-<li><p>bucket语法：scoop bucket add [软件源名字(随意)] [源地址]</p>
-</li>
-</ul>
-<p><img src="https://www.limufang.com/wp-content/themes/9IPHP-master/images/lazy_loading.gif" alt="img"></p>
-<ul>
-<li><p>bucket源推荐：</p>
-<p><strong>官方：</strong><br>scoop bucket add main # 默认<br>scoop bucket add extras # 推荐<br>scoop bucket add versions<br>scoop bucket add nightlies<br>scoop bucket add nirsoft<br>scoop bucket add php<br>scoop bucket add nerd-fonts<br>scoop bucket add nonportable<br>scoop bucket add java<br>scoop bucket add games<br>scoop bucket add jetbrains # 推荐</p>
-<p><strong>常用应用：</strong><br>2345看图王、acmekit、beyondcompare、分流抢票、ccleaner、centbrowser、chrome、clash、claunch、contextmenumanager、cosbrowser、dism++、ditto、emeditor、欧路词典、exescope、fastcopy、foobar2000、fscapture、fsresizer、hbuilderx、idm、iobitdriverbooster、iobituninstaller、kodobrowser、kodoimport、ksoftmgr、lightproxy、鲁大师、n_m3u8dl-cli、网易云音乐、newfiletime、notepad2、notepad2-mod、notepad3、ocam、oss-browser、ossutil、pdfshaper、picgo、potplayer、protoc、proxifier、q-dir、qq、qshell、remnote、renamer、shadowsocksrr、totalcommander、ultraiso、uninstalltool、v2rayn、微信、全民K歌、wisecare365、美图秀秀、xtools、xyplorer等<br><code>scoop bucket add echo https://github.com/echoiron/echo-scoop</code></p>
-<p><strong>国内常用应用：</strong><br>微信、QQ、钉钉、网易云音乐等<br><code>scoop bucket add dorado https://github.com/chawyehsu/dorado</code></p>
-<p><strong>国外常用应用：</strong><br><code>scoop bucket add dodorz https://github.com/dodorz/scoop</code></p>
-</li>
-</ul>
-<p>6.<strong>关于包管理</strong></p>
-<p>Windows包关系体系目前还不算完善，scoop大部分软件属于国外，下载速度并不乐观，所以scoop的学习成本并不低。如果你爱折腾，可以代理或者接入VPN。相信这是一款使用后就会爱不释手的管理器。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/26/scoop/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/25/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2021/10/25/hello-world/" class="archive-article-date">
-  	<time datetime="2021-10-25T07:48:05.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/25/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -682,8 +430,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
