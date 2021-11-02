@@ -188,6 +188,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-go_map_sort" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/02/go_map_sort/">map 排序_Go语言中的排序</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/02/go_map_sort/" class="archive-article-date">
+  	<time datetime="2021-11-02T03:50:43.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id=""><a href="#" class="headerlink" title=""></a></h5><h3 id="对一片int，float64或字符串进行排序"><a href="#对一片int，float64或字符串进行排序" class="headerlink" title="对一片int，float64或字符串进行排序"></a>对一片int，float64或字符串进行排序</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s := []<span class="keyword">int</span>&#123;<span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>&#125;</span><br><span class="line">sort.Ints(s)</span><br><span class="line">fmt.Println(s) <span class="comment">// [1 2 3 4]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用自定义排序"><a href="#使用自定义排序" class="headerlink" title="使用自定义排序"></a>使用自定义排序</h3><p>使用该功能sort.Slice。它使用提供的函数对切片进行排序less(i, j int) bool。<br>要在保持相等元素的原始顺序的同时对切片进行排序，请sort.SliceStable改为使用。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">family := []<span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Age  <span class="keyword">int</span></span><br><span class="line">&#125;&#123;</span><br><span class="line">    &#123;<span class="string">&quot;Alice&quot;</span>, <span class="number">23</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;David&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;Eve&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;Bob&quot;</span>, <span class="number">25</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sort.SliceStable(family, <span class="function"><span class="keyword">func</span><span class="params">(i, j <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> family[i].Age &lt; family[j].Age</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">fmt.Println(family) </span><br><span class="line"><span class="comment">// [&#123;David 2&#125; &#123;Eve 2&#125; &#123;Alice 23&#125; &#123;Bob 25&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="排序自定义数据结构"><a href="#排序自定义数据结构" class="headerlink" title="排序自定义数据结构"></a>排序自定义数据结构</h3><p>使用通用sort.Sort和 sort.Stable函数。<br>它们对实现接口的任何集合进行排序 。sort.Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Interface <span class="keyword">interface</span> &#123;</span><br><span class="line">        <span class="comment">// Len is the number of elements in the collection.</span></span><br><span class="line">        Len() <span class="keyword">int</span></span><br><span class="line">        <span class="comment">// Less reports whether the element with</span></span><br><span class="line">        <span class="comment">// index i should sort before the element with index j.</span></span><br><span class="line">        Less(i, j <span class="keyword">int</span>) <span class="keyword">bool</span></span><br><span class="line">        <span class="comment">// Swap swaps the elements with indexes i and j.</span></span><br><span class="line">        Swap(i, j <span class="keyword">int</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">这是一个例子。</span><br><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Age  <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ByAge implements sort.Interface based on the Age field.</span></span><br><span class="line"><span class="keyword">type</span> ByAge []Person</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a ByAge)</span> <span class="title">Len</span><span class="params">()</span> <span class="title">int</span></span> &#123; <span class="keyword">return</span> <span class="built_in">len</span>(a) &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a ByAge)</span> <span class="title">Less</span><span class="params">(i, j <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123; <span class="keyword">return</span> a[i].Age &lt; a[j].Age &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a ByAge)</span> <span class="title">Swap</span><span class="params">(i, j <span class="keyword">int</span>)</span></span>      &#123; a[i], a[j] = a[j], a[i] &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	family := []Person&#123;</span><br><span class="line">        &#123;<span class="string">&quot;Alice&quot;</span>, <span class="number">23</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Eve&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Bob&quot;</span>, <span class="number">25</span>&#125;,</span><br><span class="line">    &#125;</span><br><span class="line">    sort.Sort(ByAge(family))</span><br><span class="line">    fmt.Println(family) </span><br><span class="line">    <span class="comment">// [&#123;Eve 2&#125; &#123;Alice 23&#125; &#123;Bob 25&#125;]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="按键或值对map排序"><a href="#按键或值对map排序" class="headerlink" title="按键或值对map排序"></a>按键或值对map排序</h3><p>一个map是一个无序的键-值对的集合。如果需要稳定的迭代顺序，则必须维护单独的数据结构。</p>
+<p>此代码示例使用一个键片段按键顺序对映射进行排序。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">m := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>&#123;<span class="string">&quot;Alice&quot;</span>: <span class="number">2</span>, <span class="string">&quot;Cecil&quot;</span>: <span class="number">1</span>, <span class="string">&quot;Bob&quot;</span>: <span class="number">3</span>&#125;</span><br><span class="line">keys := <span class="built_in">make</span>([]<span class="keyword">string</span>, <span class="number">0</span>, <span class="built_in">len</span>(m))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> k := <span class="keyword">range</span> m &#123;</span><br><span class="line">    keys = <span class="built_in">append</span>(keys, k)</span><br><span class="line">&#125;</span><br><span class="line">sort.Strings(keys)</span><br><span class="line"><span class="keyword">for</span> _, k := <span class="keyword">range</span> keys &#123;</span><br><span class="line">    fmt.Println(k, m[k])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Output:</span></span><br><span class="line"><span class="comment">// Alice 2</span></span><br><span class="line"><span class="comment">// Bob 3</span></span><br><span class="line"><span class="comment">// Cecil 1</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/02/go_map_sort/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-go_cron" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

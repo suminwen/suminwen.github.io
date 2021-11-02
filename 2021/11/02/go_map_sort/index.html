@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Go定时任务库：cron | Su</title>
+  <title>map 排序_Go语言中的排序 | Su</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Linux中，Cron是计划任务管理系统，通过crontab命令使任务在约定的时间执行已经计划好的工作，例如定时备份系统数据、周期性清理缓存、定时重启服务等。本文介绍的cron库，就是用Go实现Linux中crontab命令的相似效果。 使用示例 安装下载cron，目前最新的稳定版已经迭代到了v3 1go get github.com&#x2F;robfig&#x2F;cron&#x2F;v3@v3.0.0  在项目中导入包">
+  <meta name="description" content="对一片int，float64或字符串进行排序123s :&#x3D; []int&amp;#123;4, 2, 3, 1&amp;#125;sort.Ints(s)fmt.Println(s) &#x2F;&#x2F; [1 2 3 4]  使用自定义排序使用该功能sort.Slice。它使用提供的函数对切片进行排序less(i, j int) bool。要在保持相等元素的原始顺序的同时对切片进行排序，请sort.SliceStable改为使">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go定时任务库：cron">
-<meta property="og:url" content="http://example.com/2021/11/01/go_cron/index.html">
+<meta property="og:title" content="map 排序_Go语言中的排序">
+<meta property="og:url" content="http://example.com/2021/11/02/go_map_sort/index.html">
 <meta property="og:site_name" content="Su">
-<meta property="og:description" content="在Linux中，Cron是计划任务管理系统，通过crontab命令使任务在约定的时间执行已经计划好的工作，例如定时备份系统数据、周期性清理缓存、定时重启服务等。本文介绍的cron库，就是用Go实现Linux中crontab命令的相似效果。 使用示例 安装下载cron，目前最新的稳定版已经迭代到了v3 1go get github.com&#x2F;robfig&#x2F;cron&#x2F;v3@v3.0.0  在项目中导入包">
+<meta property="og:description" content="对一片int，float64或字符串进行排序123s :&#x3D; []int&amp;#123;4, 2, 3, 1&amp;#125;sort.Ints(s)fmt.Println(s) &#x2F;&#x2F; [1 2 3 4]  使用自定义排序使用该功能sort.Slice。它使用提供的函数对切片进行排序less(i, j int) bool。要在保持相等元素的原始顺序的同时对切片进行排序，请sort.SliceStable改为使">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-01T10:09:12.015Z">
-<meta property="article:modified_time" content="2021-11-01T10:09:12.023Z">
+<meta property="article:published_time" content="2021-11-02T03:50:43.790Z">
+<meta property="article:modified_time" content="2021-11-02T03:50:43.794Z">
 <meta property="article:author" content="su">
 <meta name="twitter:card" content="summary">
   
@@ -190,145 +190,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-go_cron" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-go_map_sort" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Go定时任务库：cron
+      map 排序_Go语言中的排序
     </h1>
   
 
         
-        <a href="/2021/11/01/go_cron/" class="archive-article-date">
-  	<time datetime="2021-11-01T10:09:12.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-01</time>
+        <a href="/2021/11/02/go_map_sort/" class="archive-article-date">
+  	<time datetime="2021-11-02T03:50:43.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id=""><a href="#" class="headerlink" title=""></a></h5><p>在Linux中，Cron是计划任务管理系统，通过crontab命令使任务在约定的时间执行已经计划好的工作，例如定时备份系统数据、周期性清理缓存、定时重启服务等。本文介绍的cron库，就是用Go实现Linux中crontab命令的相似效果。</p>
-<p><strong>使用示例</strong></p>
-<p>安装下载cron，目前最新的稳定版已经迭代到了v3</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/robfig/cron/v3@v3.0.0</span><br></pre></td></tr></table></figure>
+        <h5 id=""><a href="#" class="headerlink" title=""></a></h5><h3 id="对一片int，float64或字符串进行排序"><a href="#对一片int，float64或字符串进行排序" class="headerlink" title="对一片int，float64或字符串进行排序"></a>对一片int，float64或字符串进行排序</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s := []<span class="keyword">int</span>&#123;<span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>&#125;</span><br><span class="line">sort.Ints(s)</span><br><span class="line">fmt.Println(s) <span class="comment">// [1 2 3 4]</span></span><br></pre></td></tr></table></figure>
 
-<p>在项目中导入包</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &quot;github.com/robfig/cron/v3&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="使用自定义排序"><a href="#使用自定义排序" class="headerlink" title="使用自定义排序"></a>使用自定义排序</h3><p>使用该功能sort.Slice。它使用提供的函数对切片进行排序less(i, j int) bool。<br>要在保持相等元素的原始顺序的同时对切片进行排序，请sort.SliceStable改为使用。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">family := []<span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Age  <span class="keyword">int</span></span><br><span class="line">&#125;&#123;</span><br><span class="line">    &#123;<span class="string">&quot;Alice&quot;</span>, <span class="number">23</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;David&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;Eve&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;Bob&quot;</span>, <span class="number">25</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sort.SliceStable(family, <span class="function"><span class="keyword">func</span><span class="params">(i, j <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> family[i].Age &lt; family[j].Age</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">fmt.Println(family) </span><br><span class="line"><span class="comment">// [&#123;David 2&#125; &#123;Eve 2&#125; &#123;Alice 23&#125; &#123;Bob 25&#125;]</span></span><br></pre></td></tr></table></figure>
 
-<p>使用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">  	&quot;fmt&quot;</span><br><span class="line">  	&quot;github.com/robfig/cron/v3&quot;</span><br><span class="line">	)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	c := cron.New()</span><br><span class="line">	c.AddFunc(&quot;30 * * * *&quot;, func() &#123; fmt.Println(&quot;Every hour on the half hour&quot;) &#125;)</span><br><span class="line">	c.AddFunc(&quot;30 3-6,20-23 * * *&quot;, func() &#123; fmt.Println(&quot;.. in the range 3-6am, 8-11pm&quot;) &#125;)</span><br><span class="line">	c.AddFunc(&quot;CRON_TZ=Asia/Tokyo 30 04 * * *&quot;, func() &#123; fmt.Println(&quot;Runs at 04:30 Tokyo time every day&quot;) &#125;)</span><br><span class="line">	c.AddFunc(&quot;@hourly&quot;, func() &#123; fmt.Println(&quot;Every hour, starting an hour from now&quot;) &#125;)</span><br><span class="line">	c.AddFunc(&quot;@every 1h30m&quot;, func() &#123; fmt.Println(&quot;Every hour thirty, starting an hour thirty from now&quot;) &#125;)</span><br><span class="line">	c.AddFunc(&quot;@every 1s&quot;, func() &#123;fmt.Println(&quot;Every 1 second, starting an hour thirty from now&quot;)&#125;)</span><br><span class="line">	c.Start()</span><br><span class="line">	select &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="排序自定义数据结构"><a href="#排序自定义数据结构" class="headerlink" title="排序自定义数据结构"></a>排序自定义数据结构</h3><p>使用通用sort.Sort和 sort.Stable函数。<br>它们对实现接口的任何集合进行排序 。sort.Interface</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Interface <span class="keyword">interface</span> &#123;</span><br><span class="line">        <span class="comment">// Len is the number of elements in the collection.</span></span><br><span class="line">        Len() <span class="keyword">int</span></span><br><span class="line">        <span class="comment">// Less reports whether the element with</span></span><br><span class="line">        <span class="comment">// index i should sort before the element with index j.</span></span><br><span class="line">        Less(i, j <span class="keyword">int</span>) <span class="keyword">bool</span></span><br><span class="line">        <span class="comment">// Swap swaps the elements with indexes i and j.</span></span><br><span class="line">        Swap(i, j <span class="keyword">int</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">这是一个例子。</span><br><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Age  <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ByAge implements sort.Interface based on the Age field.</span></span><br><span class="line"><span class="keyword">type</span> ByAge []Person</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a ByAge)</span> <span class="title">Len</span><span class="params">()</span> <span class="title">int</span></span> &#123; <span class="keyword">return</span> <span class="built_in">len</span>(a) &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a ByAge)</span> <span class="title">Less</span><span class="params">(i, j <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123; <span class="keyword">return</span> a[i].Age &lt; a[j].Age &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a ByAge)</span> <span class="title">Swap</span><span class="params">(i, j <span class="keyword">int</span>)</span></span>      &#123; a[i], a[j] = a[j], a[i] &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	family := []Person&#123;</span><br><span class="line">        &#123;<span class="string">&quot;Alice&quot;</span>, <span class="number">23</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Eve&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Bob&quot;</span>, <span class="number">25</span>&#125;,</span><br><span class="line">    &#125;</span><br><span class="line">    sort.Sort(ByAge(family))</span><br><span class="line">    fmt.Println(family) </span><br><span class="line">    <span class="comment">// [&#123;Eve 2&#125; &#123;Alice 23&#125; &#123;Bob 25&#125;]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-<ul>
-<li><strong>创建cron对象</strong></li>
-</ul>
-<p>使用时，首先通过cron.New()创建cron对象，通过该对象管理定时任务。通过调用cron的AddFunc()方法添加定时任务。AddFun()入参为二，参数一是以字符串的形式指定触发任务规则，参数二是无入参的函数，任务触发时执行函数。</p>
-<ul>
-<li><strong>添加触发任务</strong></li>
-</ul>
-<p>30 * * * *表示每个小时内的第30分钟时触发；30 3-6,20-23 * * *表示在早上3点到6点，下午8点到11点的第30分钟时触发；CRON_TZ=Asia/Tokyo 30 04 * * *表示东京时间每天早上4点半触发；@hourly表示从添加该任务时算起的之后每小时触发；@every 1h30m表示从添加该任务时算起的之后每一个半小时触发；@every 1s表示从添加该任务时算起的之后每秒触发。</p>
-<ul>
-<li><strong>启动定时循环</strong></li>
-</ul>
-<p>通过调用cron.Start()启动定时循环任务。</p>
-<p>输出</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ go run main.go </span><br><span class="line">Every 1 second, starting an hour thirty from now</span><br><span class="line">Every 1 second, starting an hour thirty from now</span><br><span class="line">Every 1 second, starting an hour thirty from now</span><br><span class="line">Every 1 second, starting an hour thirty from now</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="按键或值对map排序"><a href="#按键或值对map排序" class="headerlink" title="按键或值对map排序"></a>按键或值对map排序</h3><p>一个map是一个无序的键-值对的集合。如果需要稳定的迭代顺序，则必须维护单独的数据结构。</p>
+<p>此代码示例使用一个键片段按键顺序对映射进行排序。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">m := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>&#123;<span class="string">&quot;Alice&quot;</span>: <span class="number">2</span>, <span class="string">&quot;Cecil&quot;</span>: <span class="number">1</span>, <span class="string">&quot;Bob&quot;</span>: <span class="number">3</span>&#125;</span><br><span class="line">keys := <span class="built_in">make</span>([]<span class="keyword">string</span>, <span class="number">0</span>, <span class="built_in">len</span>(m))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> k := <span class="keyword">range</span> m &#123;</span><br><span class="line">    keys = <span class="built_in">append</span>(keys, k)</span><br><span class="line">&#125;</span><br><span class="line">sort.Strings(keys)</span><br><span class="line"><span class="keyword">for</span> _, k := <span class="keyword">range</span> keys &#123;</span><br><span class="line">    fmt.Println(k, m[k])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Output:</span></span><br><span class="line"><span class="comment">// Alice 2</span></span><br><span class="line"><span class="comment">// Bob 3</span></span><br><span class="line"><span class="comment">// Cecil 1</span></span><br></pre></td></tr></table></figure>
 
 
-
-<p>由于只让以上程序运行了几秒的时间，因此，输出中只包含执行了每秒触发的打印。随着程序运行时间的加长，其他触发任务也会在满足条件时进行打印。</p>
-<p><strong>cron时间表达式规则</strong></p>
-<p>cron表达式默认通过使用5个以空格分隔的字段组合来表示触发时间（和linux的crontab保持一致）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Field name   | Mandatory? | Allowed values  | Allowed special characters</span><br><span class="line">----------   | ---------- | --------------  | --------------------------</span><br><span class="line">Minutes      | Yes        | 0-59            | * / , -</span><br><span class="line">Hours        | Yes        | 0-23            | * / , -</span><br><span class="line">Day of month | Yes        | 1-31            | * / , - ?</span><br><span class="line">Month        | Yes        | 1-12 or JAN-DEC | * / , -</span><br><span class="line">Day of week  | Yes        | 0-6 or SUN-SAT  | * / , - ?</span><br></pre></td></tr></table></figure>
-
-
-
-<p>如同30 * * * *一样，默认第1个字段表示分钟，第2个字段表示小时，第3个字段表示每月中的日期，第4个字段表示月份数，第5个字段表示星期几。</p>
-<p>cron还提供了强大的自定义时间格式功能，可以通过调用cron.NewParser()创建自定义Parser对象，例如通过以下方式定义新的cron时间表达式规则</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cron.New(</span><br><span class="line">    cron.WithParser(</span><br><span class="line">    cron.NewParser(</span><br><span class="line">         cron.Second | cron.Minute | cron.Hour | cron.Dom | cron.Month | cron.Dow | cron.Descriptor)))</span><br></pre></td></tr></table></figure>
-
-<p>这样，时间字段一共是7位，第1位就是指定秒。秒执行的时间表达式就可以用1 * * * * * *表示。</p>
-<p>因为添加Seconds是对标准cron规范的最常见修改，因此cron提供了一个内置函数cron.WithSeconds()来执行此操作，该函数等效于之前使用的自定义解析器。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cron.New(cron.WithSeconds())</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>预定义时间表</strong></li>
-</ul>
-<p>由于cron的时间表达式可读性不是很好，因此cron库预定义了一些字符串来表示特定的时间规则。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Entry                  | Description                                | Equivalent To</span><br><span class="line">-----                  | -----------                                | -------------</span><br><span class="line">@yearly (or @annually) | Run once a year, midnight, Jan. 1st        | 0 0 1 1 *</span><br><span class="line">@monthly               | Run once a month, midnight, first of month | 0 0 1 * *</span><br><span class="line">@weekly                | Run once a week, midnight between Sat/Sun  | 0 0 * * 0</span><br><span class="line">@daily (or @midnight)  | Run once a day, midnight                   | 0 0 * * *</span><br><span class="line">@hourly                | Run once an hour, beginning of hour        | 0 * * * *</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>时间间隔</strong></li>
-</ul>
-<p>cron还提供了更具可读性的固定时间间隔格式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@every &lt;duration&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>它代码每隔duration触发执行一次任务。这里的duration是通过调用标准库time的ParseDuration()函数解析的，所以只要ParseDuration()支持的格式都能支持。例如上文示例的@every 1h30m和@every 1s。</p>
-<p><strong>cron可控选项</strong></p>
-<p>在cron源码option.go文件中，暴露了5个函数供开发者控制cron对象的选项。</p>
-<ul>
-<li><strong>WithLocation()</strong></li>
-</ul>
-<p>指定时区。默认情况下基于当前时区（在Unix系统中，查询TZ环境变量确定要使用的时区，若未定义TZ，则使用/etc/localtime文件中的定义时区）。可通过在时间字符串前添加CRON_TZ=字符串再加上具体的时区。例如东京时区为Asia/Tokyo。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.AddFunc(&quot;CRON_TZ=Asia/Tokyo 30 04 * * *&quot;, func() &#123; fmt.Println(&quot;Runs at 04:30 Tokyo time every day&quot;) &#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>WithParser()</strong></li>
-</ul>
-<p>自定义时间解析器，上文已有示例，这里不再赘述。</p>
-<ul>
-<li><strong>WithSeconds()</strong></li>
-</ul>
-<p>增加对秒的时间格式支持，其内部调用的WithParser()方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func WithSeconds() Option &#123;</span><br><span class="line">    return WithParser(NewParser(</span><br><span class="line">        Second | Minute | Hour | Dom | Month | Dow | Descriptor,</span><br><span class="line">    ))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>WithChain()</strong></li>
-</ul>
-<p>Job包装器，下文中会讲解Job接口。</p>
-<ul>
-<li><strong>WithLogger()</strong></li>
-</ul>
-<p>Logger是cron中用于记录日志的接口，WithLogger()可以设置自定义的Logger。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> package main</span><br><span class="line"> </span><br><span class="line"> import (</span><br><span class="line">     &quot;fmt&quot;</span><br><span class="line">     &quot;log&quot;</span><br><span class="line">     &quot;os&quot;</span><br><span class="line"> </span><br><span class="line">     &quot;github.com/robfig/cron/v3&quot;</span><br><span class="line"> )</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    c := cron.New(cron.WithLogger(cron.VerbosePrintfLogger(log.New(os.Stdout, &quot;cron process: &quot;, log.LstdFlags))))</span><br><span class="line">    c.AddFunc(&quot;@every 1s&quot;, func() &#123; fmt.Println(&quot;Every 1 second&quot;) &#125;)</span><br><span class="line">    c.Start()</span><br><span class="line">    select &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>该logger记录了cron内部的调度过程，输入如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">go run main.go </span><br><span class="line"> cron process: 2020/08/30 00:07:04 start</span><br><span class="line"> cron process: 2020/08/30 00:07:04 schedule, now=2020-08-30T00:07:04+08:00, entry=1, next=2020-08-30T00:07:05+08:00</span><br><span class="line"> cron process: 2020/08/30 00:07:05 wake, now=2020-08-30T00:07:05+08:00</span><br><span class="line"> cron process: 2020/08/30 00:07:05 run, now=2020-08-30T00:07:05+08:00, entry=1, next=2020-08-30T00:07:06+08:00</span><br><span class="line"> Every 1 second</span><br><span class="line"> cron process: 2020/08/30 00:07:06 wake, now=2020-08-30T00:07:06+08:00</span><br><span class="line"> Every 1 second</span><br><span class="line"> cron process: 2020/08/30 00:07:06 run, now=2020-08-30T00:07:06+08:00, entry=1, next=2020-08-30T00:07:07+08:00</span><br><span class="line">cron process: 2020/08/30 00:07:07 wake, now=2020-08-30T00:07:07+08:00</span><br><span class="line">cron process: 2020/08/30 00:07:07 run, now=2020-08-30T00:07:07+08:00, entry=1, next=2020-08-30T00:07:08+08:00</span><br><span class="line">Every 1 second</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>自定义Job</strong></p>
-<p>cron中定义了Job接口，对象只要实现了Job接口所定义的Run()方法，均可以调用cron.AddJob()方法将该对象添加到定时管理器中。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Job is an interface for submitted cron jobs.</span><br><span class="line">type Job interface &#123;</span><br><span class="line">    Run()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>AddFunc()</strong></li>
-</ul>
-<p>在上文示例中，通过cron.AddFunc()方法为cron对象添加定时任务。实质上，AddFunc()方法内部调用的也是AddJob()方法：定义新类型对象FuncJob，为其实现Job接口，在AddFunc()方法中，将回调参数func()转为FuncJob类型，调用AddJob()方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type FuncJob func()</span><br><span class="line"></span><br><span class="line">func (f FuncJob) Run() &#123; f() &#125;</span><br><span class="line"></span><br><span class="line">func (c *Cron) AddFunc(spec string, cmd func()) (EntryID, error) &#123;</span><br><span class="line">    return c.AddJob(spec, FuncJob(cmd))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>自实现Job接口</strong></li>
-</ul>
-<p>除了通过AddFunc()将无参函数直接作为回调外，我们还可以通过AddJon()自定义对象。</p>
-<p>如下，自定义对象CallJob，实现Run()方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"> package main</span><br><span class="line"> </span><br><span class="line"> import (</span><br><span class="line">     &quot;fmt&quot;</span><br><span class="line">     &quot;time&quot;</span><br><span class="line"> </span><br><span class="line">    &quot;github.com/robfig/cron/v3&quot;</span><br><span class="line"> )</span><br><span class="line"></span><br><span class="line">type CallJob struct &#123;</span><br><span class="line">    name   string</span><br><span class="line">    number int</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func (c CallJob) Run() &#123;</span><br><span class="line">   fmt.Printf(&quot;call %s : %d\n&quot;, c.name, c.number)</span><br><span class="line">&#125;</span><br><span class="line">func main() &#123;</span><br><span class="line">    c := cron.New()</span><br><span class="line">    c.AddJob(&quot;@every 1s&quot;, CallJob&#123;</span><br><span class="line">        name:   &quot;Bob&quot;,</span><br><span class="line">        number: 13888888888,</span><br><span class="line">    &#125;)</span><br><span class="line">   c.Start()</span><br><span class="line">   time.Sleep(3 * time.Second)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输出</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ go run main.go </span><br><span class="line">call Bob : 13888888888</span><br><span class="line">call Bob : 13888888888</span><br><span class="line">call Bob : 13888888888</span><br></pre></td></tr></table></figure>
-
-<p>cron库为go开发者提供了强大的定时任务管理功能，它的时间表达式格式和linux下的crontab命令是对齐的。</p>
-<p>cron的代码并不算多，其核心定时管理功能依赖了go标准库time和sort，非常值得学习和参考。另外有一个基于该库抽离出来的最小化定时任务库gron，更易理解和使用，文末会附上该库地址。</p>
-<p><strong>仓库地址</strong></p>
-<h5 id="1-https-github-com-robfig-cron"><a href="#1-https-github-com-robfig-cron" class="headerlink" title="1. *https://github.com/robfig/cron"></a>1. *<a target="_blank" rel="noopener" href="https://github.com/robfig/cron">https://github.com/robfig/cron</a></h5><h5 id="2-https-github-com-roylee0704-gron"><a href="#2-https-github-com-roylee0704-gron" class="headerlink" title="2.https://github.com/roylee0704/gron"></a>2.<em><a target="_blank" rel="noopener" href="https://github.com/roylee0704/gron">https://github.com/roylee0704/gron</a></em></h5>
       
 
       
@@ -412,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://suminwen.github.io/2021/11/01/go_cron/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://suminwen.github.io/2021/11/02/go_map_sort/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -427,18 +321,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/11/02/go_map_sort/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          map 排序_Go语言中的排序
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/11/01/go_rand/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">go-rand随机数</div>
+    <a href="/2021/11/01/go_cron/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Go定时任务库：cron</div>
       <i class="icon-circle-right"></i>
     </a>
   
