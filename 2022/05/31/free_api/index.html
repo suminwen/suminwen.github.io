@@ -6,15 +6,46 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Su</title>
+  <title>最好的6个免费天气接口 | Su</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Su">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="天气 API包含丰富的天气数据，不仅有实时温度、湿度、风速、降水等这些基础数据，还有过去的历史天气数据和未来的天气预测数据，顶级的天气 API 接口还会包括天气灾害预警，空气质量指数，日出日落、潮汐及月相相关的天文气象等数据。天气 API 也并不难获得，本教程将介绍 6 款国内外免费的天气 API，并手把手教你搭建一套属于自己的天气数据看板。 免费的天气 API 概览 - 如何选到免费又稳定的天气">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最好的6个免费天气接口">
+<meta property="og:url" content="http://example.com/2022/05/31/free_api/index.html">
 <meta property="og:site_name" content="Su">
+<meta property="og:description" content="天气 API包含丰富的天气数据，不仅有实时温度、湿度、风速、降水等这些基础数据，还有过去的历史天气数据和未来的天气预测数据，顶级的天气 API 接口还会包括天气灾害预警，空气质量指数，日出日落、潮汐及月相相关的天文气象等数据。天气 API 也并不难获得，本教程将介绍 6 款国内外免费的天气 API，并手把手教你搭建一套属于自己的天气数据看板。 免费的天气 API 概览 - 如何选到免费又稳定的天气">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kalacloud.com/static/9c20bcb5009f47a1eb88e1f52cd7766f/0ef85/01-01-gaode.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/2d081ba62eb3bfaeceef2500a4260907/06540/01-02-API.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/ecb5dd08e22dd72c24b03dccadb2e9c4/90683/01-03-gaode-api.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/bd444852cf548e80bf7cbee8c74c1b23/90683/01-04-gaode-kalacloud.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/36f88033d2b98066be37044e28c39b13/8e517/02-01-seniverse-weather-api.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/0d03ec40b02733dd123e42e3e022e4e6/7c971/02-02-apikey.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/56b80b4e2bceb4c98461e9bc3ea73695/90683/02-03-kalacloud.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/725ec8016a31d9fcc775b77d2ddb614a/f5390/03-01-qerather-weather-api.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/233ba6ab094615c666d3ef02decf0d15/cd3e9/03-02-apikey.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/de4ac26c3f1cb2f44ff38fd45a55605c/57bde/04-01-openweather.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/59cc1add90758444de88c939362acbc5/f2991/04-02-register.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/577c5ca4672f32ec24c753511a9287bb/562c2/04-04-kalacloud-get.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/84cd4266b2b03419ef13cdc103cd357c/e3cde/05-01-accuweather.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/f18ea9d9df522243700acc18c2118a88/1b11e/05-02-myapps.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/2b778c76069eb1a6353df655e0d27c9a/600df/05-04-kalacloud-get.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/d16dce4dd0d2ad01a8d22a2685de356c/0a5d2/06-01-visual-crossing.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/ce2e3f0c8bca6b571035d18ccbe2d692/5f298/06-02-visual-crossing-key.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/d16dce4dd0d2ad01a8d22a2685de356c/0a5d2/06-01-visual-crossing.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/3448f86ccf150e24094b04a85c3799cd/c3299/06-03-visual-crossing-kalacloud-get.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/6df4567b5cbacfdab647968f32507946/318d8/07-01-get-api-url.png">
+<meta property="og:image" content="https://kalacloud.com/static/fdd895961a11a348fcf3a04ddf642002/b4627/07-02-kalacloud-api-input.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/5c5bbdcd8e1d25886750b2fe0ff9d62f/ca562/07-03-create-query-api.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/cbd0084181be0a883bcfdc15473bb9dd/9a985/07-04-get.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/bf37d4943a0c7afec6340515e2945c35/f5390/07-05-form.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/16cca52b6a302c63f142c36fb8ebf3b9/e895b/07-06-csv.jpg">
+<meta property="og:image" content="https://kalacloud.com/static/acbda66bc6421e4c108f5090b929752e/d8536/07-07-kalacloud.jpg">
+<meta property="article:published_time" content="2022-05-31T09:29:01.516Z">
+<meta property="article:modified_time" content="2022-05-31T09:29:01.520Z">
 <meta property="article:author" content="su">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kalacloud.com/static/9c20bcb5009f47a1eb88e1f52cd7766f/0ef85/01-01-gaode.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Su" type="application/atom+xml">
   
@@ -186,305 +217,398 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-free_api" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/05/31/go_rabbitmq/" class="archive-article-date">
-  	<time datetime="2022-05-31T09:29:01.532Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/31/go_rabbitmq/">ubuntu 20.04安装rabbitmq教程</a>
+    <h1 class="article-title" itemprop="name">
+      最好的6个免费天气接口
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/05/31/free_api/" class="archive-article-date">
+        
+        <a href="/2022/05/31/free_api/" class="archive-article-date">
   	<time datetime="2022-05-31T09:29:01.516Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-31</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/31/free_api/">最好的6个免费天气接口</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <p><strong>天气 API</strong>包含丰富的天气数据，不仅有实时温度、湿度、风速、降水等这些基础数据，还有过去的历史天气数据和未来的天气预测数据，<strong>顶级的天气 API 接口</strong>还会包括天气灾害预警，空气质量指数，日出日落、潮汐及月相相关的天文气象等数据。<strong>天气 API 也并不难获得，本教程将介绍 6 款国内外免费的天气 API，并手把手教你搭建一套属于自己的天气数据看板。</strong></p>
+<h2 id="免费的天气-API-概览-如何选到免费又稳定的天气-API-接口"><a href="#免费的天气-API-概览-如何选到免费又稳定的天气-API-接口" class="headerlink" title="免费的天气 API 概览 - 如何选到免费又稳定的天气 API 接口"></a>免费的天气 API 概览 - 如何选到免费又稳定的天气 API 接口</h2><p>本文所介绍的天气 API 均是我自己接入使用过的，它们是从众多天气 API 中甄选出的 6 款高质量免费天气 API 。这 6 款 API 都是基础免费增值付费的商业模式，这种模式保证了免费用户可以长期稳定的使用，不用担心数据源挂掉。特别是本文介绍的全球天气 API 对免费用户非常友好，免费开放的数据更多样，限制更少，我会在本文后半段详细介绍。</p>
+<p><strong>本文详细讲解以下 6 个免费天气 API 的特点及接入方法</strong></p>
+<ul>
+<li>高德天气 API -免费、 稳定、极简，适合天气预报基础需求</li>
+<li>心知天气 API - 免费、轻便、专业，适合天气预报的初级需求</li>
+<li>和风天气 API - 免费和付费同权限，非商业无限免费，含空气质量、天文气象</li>
+<li>OpenWeather - 免费 100 万次/月 分钟级实时预报，天气云图</li>
+<li>AccuWeather - 全球最大的气象数据服务商，历史悠久，数据精准，天气 API 王者</li>
+<li>Visual Crossing - 非开发者使用友好 50年历史气象数据免费调用</li>
+</ul>
+<h2 id="一-高德地图天气-API-稳定、免费、极简"><a href="#一-高德地图天气-API-稳定、免费、极简" class="headerlink" title="一. 高德地图天气 API - 稳定、免费、极简"></a>一. 高德地图天气 API - 稳定、免费、极简</h2><p><img src="https://kalacloud.com/static/9c20bcb5009f47a1eb88e1f52cd7766f/0ef85/01-01-gaode.jpg" alt="高德地图天气 API"></p>
+<p><a target="_blank" rel="noopener" href="https://lbs.amap.com/">高德地图</a>的天气服务面向仅需要稳定的实时天气和简单的未来数天预测服务的开发者，高德天气相对于本文介绍的其他天气 API 来说，显得有些简略，但如果你对天气的需求就是实时和简单的未来预报，那么高德一定是你的好选择。不绕弯，只给你最需要的部分。</p>
+<h3 id="1-高德地图天气-API-免费版可用资源"><a href="#1-高德地图天气-API-免费版可用资源" class="headerlink" title="1. 高德地图天气 API 免费版可用资源"></a>1. 高德地图天气 API 免费版可用资源</h3><ul>
+<li>30万次/日，200次/秒并发</li>
+<li>实时天气预报</li>
+<li>未来 4 天天气预报</li>
+<li>最高最低气温、风力风向、湿度</li>
+<li>与高德地图数据融合，极其丰富的地点地图路径数据</li>
+</ul>
+<h3 id="2-高德地图天气-API-接入极简教程"><a href="#2-高德地图天气-API-接入极简教程" class="headerlink" title="2. 高德地图天气 API 接入极简教程"></a>2. 高德地图天气 API 接入极简教程</h3><ul>
+<li>打开并注册<a target="_blank" rel="noopener" href="https://lbs.amap.com/">高德开放平台</a></li>
+<li>进入<a target="_blank" rel="noopener" href="https://console.amap.com/dev/key/app">高德开发平台的控制台</a>，创建应用并获取 API Key</li>
+</ul>
+<p><img src="https://kalacloud.com/static/2d081ba62eb3bfaeceef2500a4260907/06540/01-02-API.jpg" alt="高德地图天气 API"></p>
+<ul>
+<li>阅读高德地图<a target="_blank" rel="noopener" href="https://lbs.amap.com/api/webservice/guide/api/weatherinfo/">天气开发文档</a></li>
+<li>打开 API 接口工具，填入 高德地图天气 API URL</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://restapi.amap.com/v3/weather/weatherInfo?key=【你的_API_KEY】8&amp;city=110000&amp;extensions=all</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>高德天气 API 示例：北京未来三天天气预报（查看高德天气的<a target="_blank" rel="noopener" href="https://lbs.amap.com/api/webservice/download">城市编码</a>）北京的城市编码为110000</li>
+</ul>
+<p><img src="https://kalacloud.com/static/ecb5dd08e22dd72c24b03dccadb2e9c4/90683/01-03-gaode-api.jpg" alt="高德天气 API 示例"></p>
+<p>本教程使用「卡拉云」作为接口工具示例演示，在卡拉云直接调用 高德天气 API 查询数据返回成功。</p>
+<p><img src="https://kalacloud.com/static/bd444852cf548e80bf7cbee8c74c1b23/90683/01-04-gaode-kalacloud.jpg" alt="本教程使用「卡拉云」作为接口工具示例演示"></p>
+<p>使用卡拉云简单拖拽即可快速搭建自己的「天气预报数据看板」，本文最后一章详细讲解。</p>
+<h2 id="二-心知天气-API-免费、轻便、专业"><a href="#二-心知天气-API-免费、轻便、专业" class="headerlink" title="二. 心知天气 API - 免费、轻便、专业"></a>二. 心知天气 API - 免费、轻便、专业</h2><p><img src="https://kalacloud.com/static/36f88033d2b98066be37044e28c39b13/8e517/02-01-seniverse-weather-api.jpg" alt="心知天气 API"></p>
+<p><a target="_blank" rel="noopener" href="https://www.seniverse.com/">心知天气</a>用下来整体感觉轻巧顺手，对于免费版用户没有限制访问次数，可以无限访问，这点已经超过大多数国内天气 API。免费版可调用未来三天的天气预报，包含天气气象和气温两个要素。把它放在第二个介绍是因为心知天气相对于前文的高德天气来说，有可升级的空间。</p>
+<h3 id="1-心知天气-API-免费版可用资源"><a href="#1-心知天气-API-免费版可用资源" class="headerlink" title="1. 心知天气 API 免费版可用资源"></a>1. 心知天气 API 免费版可用资源</h3><ul>
+<li>永久免费，无限访问，20次/分钟</li>
+<li>全国 370 个主要城市数据</li>
+<li>实况天气数据</li>
+<li>未来 3 日天气预报</li>
+</ul>
+<h3 id="2-心知天气-API-接入极简教程"><a href="#2-心知天气-API-接入极简教程" class="headerlink" title="2. 心知天气 API 接入极简教程"></a>2. 心知天气 API 接入极简教程</h3><ul>
+<li>打开<a target="_blank" rel="noopener" href="https://www.seniverse.com/">心知天气</a>注册账号</li>
+<li>在 心知天气控制台创建你的产品，获得 API Key</li>
+</ul>
+<p><img src="https://kalacloud.com/static/0d03ec40b02733dd123e42e3e022e4e6/7c971/02-02-apikey.jpg" alt="心知天气"></p>
+<ul>
+<li>阅读<a target="_blank" rel="noopener" href="https://seniverse.yuque.com/books/share/ded1e167-e35c-4669-8306-cf65c6e01dc0/start">心知天气 API 开发文档</a></li>
+<li>打开 API 接口工具，填入心知天气 API URL</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.seniverse.com/v3/weather/daily.json?key=【你的_api_key】&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&amp;start=-1&amp;days=5</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>心知天气 API 示例：北京未来三天天气情况</li>
+</ul>
+<p><img src="https://kalacloud.com/static/56b80b4e2bceb4c98461e9bc3ea73695/90683/02-03-kalacloud.jpg" alt="心知天气 API 示例：北京未来三天天气情况"></p>
+<p>上图为卡拉云成功调用「心知天气 API 」 的返回数据。</p>
+<p>本教程使用「卡拉云」作为接口工具做演示，相对于其他接口测试工具，卡拉云在测试接口的同时，可直接完成后台工具的搭建。</p>
+<p>如何用卡拉云快速搭建自己的「天气预报数据看板」，本文最后一章详细讲解。</p>
+<h2 id="三-和风天气-API-免费付费同权限，非商业无限免费"><a href="#三-和风天气-API-免费付费同权限，非商业无限免费" class="headerlink" title="三. 和风天气 API - 免费付费同权限，非商业无限免费"></a>三. 和风天气 API - 免费付费同权限，非商业无限免费</h2><p><img src="https://kalacloud.com/static/725ec8016a31d9fcc775b77d2ddb614a/f5390/03-01-qerather-weather-api.jpg" alt="和风天气 API"></p>
+<p>必须得推荐一下<a target="_blank" rel="noopener" href="https://dev.qweather.com/">和风天气</a>，和风天气 API 面向非商业用户完全免费且不分权限，也就是说商业用户能读什么天气数据，免费用户也就能读什么天气数据。自然灾害、空气质量、极端天气预警、天文信息这些在国内天气 API 的免费版中非常少见，和风天气这种免费和付费同权的商业模式让大家能无限使用所有的数据，在你的项目成长成商业项目，有收入后再收费，可以说非常良心。</p>
+<h3 id="1-和风天气免费版可用资源"><a href="#1-和风天气免费版可用资源" class="headerlink" title="1. 和风天气免费版可用资源"></a>1. 和风天气免费版可用资源</h3><ul>
+<li>非商业用户 1000次/天 到 SDK 无限量访问</li>
+<li>按坐标、城市名称、格点方式定位并展示对应天气信息</li>
+<li>实时、三日、七日天气预报</li>
+<li>灾害极端天气预警信息</li>
+<li>全国空气质量信息</li>
+<li>热带台风信息</li>
+<li>天文气象数据（日出、日落、月相、太阳角度等）</li>
+</ul>
+<h3 id="2-和风天气-API-接入极简教程"><a href="#2-和风天气-API-接入极简教程" class="headerlink" title="2. 和风天气 API 接入极简教程"></a>2. 和风天气 API 接入极简教程</h3><ul>
+<li>打开<a target="_blank" rel="noopener" href="https://dev.qweather.com/">和风天气开放平台</a>注册账号</li>
+<li>在<a target="_blank" rel="noopener" href="https://console.qweather.com/#/apps">和风天气控制台</a>创建你的应用，获得 API Key</li>
+</ul>
+<p><img src="https://kalacloud.com/static/233ba6ab094615c666d3ef02decf0d15/cd3e9/03-02-apikey.jpg" alt="和风天气 API"></p>
+<ul>
+<li>阅读<a target="_blank" rel="noopener" href="https://dev.qweather.com/docs/">和风天气开发文档</a> （地理位置、空气、历史数据的<a target="_blank" rel="noopener" href="https://dev.qweather.com/docs/api/">开发文档</a>）</li>
+<li>打开 API 接口工具，填入和风天气 API URL</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://devapi.qweather.com/v7/weather/now?location=101010100&amp;key=【你的_api_key】</span><br></pre></td></tr></table></figure>
+
+<p>![本教程使用「卡拉云」作为接口工具做演示(03-03-kalacloud.jpg)</p>
+<p>上图为卡拉云成功调用「和风天气 API 」 的返回数据。</p>
+<p>本教程使用「卡拉云」作为接口工具做演示，相对于其他接口测试工具，卡拉云在测试接口的同时，可直接完成后台工具的搭建。</p>
+<p>如何用卡拉云快速搭建自己的「天气预报数据看板」，本文最后一章详细讲解。</p>
+<p><strong>接着我们来说说全球天气 API</strong></p>
+<h2 id="四-OpenWeather-100-万次-月-分钟级实时预报-天气云图"><a href="#四-OpenWeather-100-万次-月-分钟级实时预报-天气云图" class="headerlink" title="四. OpenWeather - 100 万次/月 分钟级实时预报 天气云图"></a>四. OpenWeather - 100 万次/月 分钟级实时预报 天气云图</h2><p><img src="https://kalacloud.com/static/de4ac26c3f1cb2f44ff38fd45a55605c/57bde/04-01-openweather.jpg" alt="OpenWeather"></p>
+<p>国际天气 API 服务商的免费档相比中国国内的，会提供更多免费数据，<a target="_blank" rel="noopener" href="https://openweathermap.org/">OpenWeather</a> 作为老牌天气信息 API 服务商，可以说是非常良心了。不仅在调用次数上给了 100 万次/月，而且在预报的精度上免费了 60 分钟分钟级预报和 48 小时每小时预报，对于天气敏感的行业来说，非常实用。</p>
+<h3 id="1-OpenWeather-免费版可用资源"><a href="#1-OpenWeather-免费版可用资源" class="headerlink" title="1. OpenWeather 免费版可用资源"></a>1. OpenWeather 免费版可用资源</h3><ul>
+<li>每月100万次调用、60次/分钟</li>
+<li>按坐标、城市名称、格点方式定位并展示对应天气信息</li>
+<li>实时天气信息</li>
+<li>60分钟内的分钟天气预报</li>
+<li>48小时内每小时天气预报</li>
+<li>7天每日天气预报</li>
+<li>过去 5 天的历史天气数据</li>
+<li>基本天气云图</li>
+<li>全球空气质量信息</li>
+</ul>
+<h3 id="2-OpenWeather-API-接入极简教程"><a href="#2-OpenWeather-API-接入极简教程" class="headerlink" title="2. OpenWeather API 接入极简教程"></a>2. OpenWeather API 接入极简教程</h3><ul>
+<li>打开 <a target="_blank" rel="noopener" href="https://openweathermap.org/">OpenWeather</a> 网址，邮箱注册，验证邮箱</li>
+<li>打开 <a target="_blank" rel="noopener" href="https://home.openweathermap.org/api_keys">OpenWeather My API Keys</a> 页面创建自己的 Key<img src="https://kalacloud.com/static/59cc1add90758444de88c939362acbc5/f2991/04-02-register.jpg" alt="OpenWeather-register"></li>
+<li>查看 <a target="_blank" rel="noopener" href="https://openweathermap.org/api">OpenWeather 开发文档</a></li>
+<li>打开 API 接口工具，填入 OpenWeather 的 API URL</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://api.openweathermap.org/data/2.5/forecast?q=beijing&amp;appid=【Your_APP_Key】</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>weather</code>：当前天气预报</li>
+<li><code>q</code>：地理位置(city name)</li>
+</ul>
+<p><img src="https://kalacloud.com/static/577c5ca4672f32ec24c753511a9287bb/562c2/04-04-kalacloud-get.jpg" alt="本教程使用「卡拉云」作为接口工具做演示"></p>
+<p>上图为卡拉云成功调用「OpenWeather API 」 的返回数据。</p>
+<p>本教程使用「卡拉云」作为接口工具做演示，相对于其他接口测试工具，卡拉云在测试接口的同时，可直接完成后台工具的搭建。</p>
+<p>如何用卡拉云快速搭建自己的「天气预报数据看板」，本文最后一章详细讲解。</p>
+<h2 id="五-AccuWeather-全球最大的气象数据服务商-历史悠久-数据精准"><a href="#五-AccuWeather-全球最大的气象数据服务商-历史悠久-数据精准" class="headerlink" title="五. AccuWeather - 全球最大的气象数据服务商 历史悠久 数据精准"></a>五. AccuWeather - 全球最大的气象数据服务商 历史悠久 数据精准</h2><p><img src="https://kalacloud.com/static/84cd4266b2b03419ef13cdc103cd357c/e3cde/05-01-accuweather.jpg" alt="AccuWeather"></p>
+<p><a target="_blank" rel="noopener" href="https://developer.accuweather.com/">AccuWeather</a> 创立于 1962 年，创始人 Joel 当时还在宾大读气象博士。现在 AccuWeather 已经是全球最大最权威的气象数据站，全球多数安卓机使用的天气查询数据都来自 AccuWeather。</p>
+<p>其实 AccuWeather 对免费用户并不友好，每日可调用数非常少，但因为它是全球天气 API 的王者，提供的气象数据、灾害预报等数据及其准确、细致和权威，我还是把它放在这个列表里，如果你正在挑选天气 API ，不管现在用不用的上 AccuWeather，我觉得你一定要知道全球最权威最棒的天气 API 长啥样，全球顶级企业，特别是对天气要求极高的道路、航空、野外作业都会选用 AccuWeather 作为天气数据支持。</p>
+<h3 id="1-AccuWeather-免费版可用资源"><a href="#1-AccuWeather-免费版可用资源" class="headerlink" title="1. AccuWeather 免费版可用资源"></a>1. AccuWeather 免费版可用资源</h3><ul>
+<li>按坐标、城市名称、格点方式定位并展示对应天气信息</li>
+<li>实时气象数据</li>
+<li>24小时历史气象数据</li>
+<li>未来 5 天每日天气预报</li>
+<li>12小时内每小时预报</li>
+<li>未来 5 天内生活指数预报</li>
+<li>每日 50 次 API 调用</li>
+</ul>
+<h3 id="2-AccuWeather-API-接入极简教程"><a href="#2-AccuWeather-API-接入极简教程" class="headerlink" title="2. AccuWeather API 接入极简教程"></a>2. AccuWeather API 接入极简教程</h3><ul>
+<li>打开 <a target="_blank" rel="noopener" href="https://developer.accuweather.com/">AccuWeather 开发者站</a>，邮箱注册并激活账号</li>
+<li>打开 <a target="_blank" rel="noopener" href="https://developer.accuweather.com/user/me/apps">My APPS</a> 页，创建你的 APP 并获得 API Key<img src="https://kalacloud.com/static/f18ea9d9df522243700acc18c2118a88/1b11e/05-02-myapps.jpg" alt="AccuWeather API "></li>
+<li>阅读 AccuWeather API 文档</li>
+<li>打开 API 接口工具，本教程使用卡拉云作为示例演示。注册并登录卡拉云，在「数据源」填入 AccuWeather 的 baseURL</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?q=39.9,116.4&amp;language=zh-cn&amp;apikey=【Your_app_key】</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>q</code>：这里可写城市名称，也可像本示例一样使用经纬度查询地点</li>
+</ul>
+<p><img src="https://kalacloud.com/static/2b778c76069eb1a6353df655e0d27c9a/600df/05-04-kalacloud-get.jpg" alt="本教程使用「卡拉云」作为接口工具做演示"></p>
+<p>上图为卡拉云成功调用「AccuWeather API 」 的返回数据。</p>
+<p>本教程使用「卡拉云」作为接口工具做演示，相对于其他接口测试工具，卡拉云在测试接口的同时，可直接完成后台工具的搭建。</p>
+<p>如何用卡拉云快速搭建自己的「天气预报数据看板」，本文最后一章详细讲解。</p>
+<h2 id="六-Visual-Crossing-非开发者友好-50年历史气象数据免费调用"><a href="#六-Visual-Crossing-非开发者友好-50年历史气象数据免费调用" class="headerlink" title="六. Visual Crossing - 非开发者友好 50年历史气象数据免费调用"></a>六. Visual Crossing - 非开发者友好 50年历史气象数据免费调用</h2><p><img src="https://kalacloud.com/static/d16dce4dd0d2ad01a8d22a2685de356c/0a5d2/06-01-visual-crossing.jpg" alt="Visual Crossing"></p>
+<p><a target="_blank" rel="noopener" href="https://www.visualcrossing.com/">Visual Crossing</a> 面向数据科学家、数据分析师、气象研究学者等学术和企业气象分析领域，也就是说 Visual Crossing 不像其他天气 API 那样假设使用者都是会写代码的程序员，所以在它的网站上对非程序员提供了非常友好的可视化气象分析工具。比如 <a target="_blank" rel="noopener" href="https://www.visualcrossing.com/weather-api">API builder</a>， 你只需要输入自己的需求，它帮你生成对应的 API URL ，只需要把这条 URL 复制到你的 API 接口工具上即可方便使用。</p>
+<h3 id="1-Visual-Crossing-免费版可用资源"><a href="#1-Visual-Crossing-免费版可用资源" class="headerlink" title="1. Visual Crossing 免费版可用资源"></a>1. Visual Crossing 免费版可用资源</h3><ul>
+<li>调用 1000次 / 天</li>
+<li><strong>50年历史气象数据</strong></li>
+<li>15天未来天气预报</li>
+<li>极端天气预警</li>
+<li>当前天气情况</li>
+<li>天文气象数据</li>
+</ul>
+<h3 id="2-Visual-Crossing-API-接入极简教程"><a href="#2-Visual-Crossing-API-接入极简教程" class="headerlink" title="2. Visual Crossing API 接入极简教程"></a>2. Visual Crossing API 接入极简教程</h3><ul>
+<li>打开 <a target="_blank" rel="noopener" href="https://www.visualcrossing.com/">Visual Crossing 官方网站</a>邮箱注册并激活账号</li>
+<li>打开 <a target="_blank" rel="noopener" href="https://www.visualcrossing.com/account">个人账户页面</a>，获取你的 API Key</li>
+</ul>
+<p><img src="https://kalacloud.com/static/ce2e3f0c8bca6b571035d18ccbe2d692/5f298/06-02-visual-crossing-key.jpg" alt="Visual Crossing API"></p>
+<ul>
+<li>查看 Visual Crossing API <a target="_blank" rel="noopener" href="https://www.visualcrossing.com/weather-api">开发文档</a></li>
+</ul>
+<p><img src="https://kalacloud.com/static/d16dce4dd0d2ad01a8d22a2685de356c/0a5d2/06-01-visual-crossing.jpg" alt="Visual Crossing API"></p>
+<ul>
+<li>我们可以在这里直接输入我们要查询的地点，网址会帮我们生成对应的 API</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/BeiJing?unitGroup=metric&amp;key=【Your_api_key】&amp;contentType=json</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://kalacloud.com/static/3448f86ccf150e24094b04a85c3799cd/c3299/06-03-visual-crossing-kalacloud-get.jpg" alt="本教程使用「卡拉云」作为接口工具做演示"></p>
+<p>上图为卡拉云成功调用「 Visual Crossing API 」 的返回数据。</p>
+<p>本教程使用「卡拉云」作为接口工具做演示，相对于其他接口测试工具，卡拉云在测试接口的同时，可直接完成后台工具的搭建。</p>
+<p>如何用卡拉云快速搭建自己的「天气预报数据看板」，本文最后一章详细讲解。</p>
+<h2 id="七-使用「卡拉云」快速搭建天气数据看板，导出天气数据至-CSV"><a href="#七-使用「卡拉云」快速搭建天气数据看板，导出天气数据至-CSV" class="headerlink" title="七. 使用「卡拉云」快速搭建天气数据看板，导出天气数据至 CSV"></a>七. 使用「卡拉云」快速搭建天气数据看板，导出天气数据至 CSV</h2><p>卡拉云是一套低代码开发工具，相对于 Postman 接口测试工具，卡拉云的优势是在做 API 接口测试的同时，直接就把后台工具给搭出来了，而且开发者完全不用会任何前端技术，只需要简单填写 API URL 即可通过鼠标拖拽快速搭建出一套天气预报数据看板，并可将数据看板分享给其他小伙伴使用。</p>
+<p>本文以「对非程序员使用友好的 Visual Crossing 天气 API 」接入卡拉云为例，接入其他天气 API 步骤完全一样。</p>
+<h3 id="第一步：注册-Visual-Crossing-账号，获得-API-Key-及-API-URL"><a href="#第一步：注册-Visual-Crossing-账号，获得-API-Key-及-API-URL" class="headerlink" title="第一步：注册 Visual Crossing 账号，获得 API Key 及 API URL"></a>第一步：注册 Visual Crossing 账号，获得 API Key 及 API URL</h3><p><img src="https://kalacloud.com/static/6df4567b5cbacfdab647968f32507946/318d8/07-01-get-api-url.png" alt="注册 Visual Crossing 账号"></p>
+<p>注册并登陆账号后，点这里获取 <a target="_blank" rel="noopener" href="https://www.visualcrossing.com/weather/weather-data-services/beijing?v=api">北京未来 15 天天气情况 API URL</a></p>
+<h3 id="第二步：注册并登录卡拉云，在「数据源」添加-Visual-Crossing-API"><a href="#第二步：注册并登录卡拉云，在「数据源」添加-Visual-Crossing-API" class="headerlink" title="第二步：注册并登录卡拉云，在「数据源」添加 Visual Crossing API"></a>第二步：注册并登录卡拉云，在「数据源」添加 Visual Crossing API</h3><p><img src="https://kalacloud.com/static/fdd895961a11a348fcf3a04ddf642002/b4627/07-02-kalacloud-api-input.jpg" alt="注册并登录卡拉云，在「数据源」添加 Visual Crossing API"></p>
+<p>注意：这里填写的是 Visual Crossing API 的 BaseURL，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步：在卡拉云新建应用，新建查询，选择资源「Visual-Crossing-API」"><a href="#第三步：在卡拉云新建应用，新建查询，选择资源「Visual-Crossing-API」" class="headerlink" title="第三步：在卡拉云新建应用，新建查询，选择资源「Visual_Crossing_API」"></a>第三步：在卡拉云新建应用，新建查询，选择资源「Visual_Crossing_API」</h3><p><img src="https://kalacloud.com/static/5c5bbdcd8e1d25886750b2fe0ff9d62f/ca562/07-03-create-query-api.jpg" alt="选择资源「Visual_Crossing_API」"></p>
+<ul>
+<li>新建查询</li>
+<li>选择刚刚我们在「数据源」添加 Visual Crossing API 资源</li>
+<li>在 HTTP 端点填写 EndPoint 的部分</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beijing?unitGroup=metric&amp;contentType=json&amp;key=【Your_app_key】</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步：GET-天气-API-测试接口"><a href="#第四步：GET-天气-API-测试接口" class="headerlink" title="第四步：GET 天气 API 测试接口"></a>第四步：GET 天气 API 测试接口</h3><p><img src="https://kalacloud.com/static/cbd0084181be0a883bcfdc15473bb9dd/9a985/07-04-get.jpg" alt="GET 天气 API 测试接口"></p>
+<p>点击「运行并预览」，在弹出的框中可以看到天气 API 返回成功的数值。</p>
+<h3 id="第五步：从「组件列表」拖拽适合的组建并将数据映射到组件上"><a href="#第五步：从「组件列表」拖拽适合的组建并将数据映射到组件上" class="headerlink" title="第五步：从「组件列表」拖拽适合的组建并将数据映射到组件上"></a>第五步：从「组件列表」拖拽适合的组建并将数据映射到组件上</h3><p><img src="https://kalacloud.com/static/bf37d4943a0c7afec6340515e2945c35/f5390/07-05-form.jpg" alt="组件列表"></p>
+<ul>
+<li>未来 15 天预报的表格数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;VisualCrossingAPI.data.days&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注解：VisualCrossingAPI 为我们在第三步创建的查询，读取 API 中的 days 数据</p>
+<ul>
+<li>当日天气预报</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">### 最高温度：&#123;&#123;table1.selectedRow.data.tempmax&#125;&#125;</span><br><span class="line">### 最低温度：&#123;&#123;table1.selectedRow.data.tempmin&#125;&#125;</span><br><span class="line">### 风速：&#123;&#123;table1.selectedRow.data.windspeed&#125;&#125;</span><br><span class="line">### 风力：&#123;&#123;table1.selectedRow.data.windgust&#125;&#125;</span><br><span class="line">### 日出时间：&#123;&#123;table1.selectedRow.data.sunrise&#125;&#125;</span><br><span class="line">### 日落时间：&#123;&#123;table1.selectedRow.data.sunset&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注解：table1 是指「未来近 15 天预报」的表格名，鼠标选中（selectedRow）哪一列，当日天气就会显示哪一列的天气预报。</p>
+<ul>
+<li>分时详情表格数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;table1.selectedRow.data.hours&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注解：table1 是指「未来近 15 天预报」的表格名，鼠标选中（selectedRow）哪一列，显示当日 24 小时分时预报</p>
+<h3 id="第六步：导出天气预报数据至-CSV-文件"><a href="#第六步：导出天气预报数据至-CSV-文件" class="headerlink" title="第六步：导出天气预报数据至 CSV 文件"></a>第六步：导出天气预报数据至 CSV 文件</h3><p><img src="https://kalacloud.com/static/16cca52b6a302c63f142c36fb8ebf3b9/e895b/07-06-csv.jpg" alt="导出天气预报数据至 CSV 文件"></p>
+<p>有时，我们通过天气 API 获取的数据需要导入其他软件或下载到本地进行数据分析，又或者需要发给合伙的小伙伴一起使用。这时，你不用操心导出数据格式、中文乱码等问题，在卡拉云组建库中直接拖拽一个「导出按钮」即可。</p>
+<p>卡拉云内置「导出按钮」，仅需拖拽一个按钮组建到画布，简单设置即可一键导出数据至 CSV / Excel / JSON 格式的文件。</p>
+<h3 id="完成：使用卡拉云简单六步，搭建天气数据看板"><a href="#完成：使用卡拉云简单六步，搭建天气数据看板" class="headerlink" title="完成：使用卡拉云简单六步，搭建天气数据看板"></a>完成：使用卡拉云简单六步，搭建天气数据看板</h3><p><img src="https://kalacloud.com/static/acbda66bc6421e4c108f5090b929752e/d8536/07-07-kalacloud.jpg" alt="搭建天气数据看板"></p>
+<p>熟练使用后，这样的数据看板使用卡拉云最多 5 分钟就能搭建完成，还可以分享给你的小伙伴一同使用。</p>
+<p>更多卡拉云使用教程，可访问<a target="_blank" rel="noopener" href="https://kalacloud.com/">卡拉云</a>官方网站查看。</p>
+<p>扩展阅读：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/postman-tutorial">Postman 使用教程 - 手把手教你 API 接口测试</a></li>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/difference-between-mysql-datetime-and-timestamp-datatypes/">MySQL 时间戳用什么类型 - MySQL 时间函数详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/api-testing-tools/">最好用的七大顶级 API 接口测试工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/top-5-rich-text-editors-for-react/">最好用的 5 款 React 富文本编辑器</a></li>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/how-to-dump-database-and-ignore-or-specific-some-tables-with-mysqldump-in-mysql/">如何在 MySQL / MariaDB 中跳过多张表导出或指定多张表导出备份</a></li>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/how-to-save-mysql-mariadb-query-output-to-a-file/">如何将 MySQL / MariaDB 的查询结果保存到文件</a></li>
+<li><a target="_blank" rel="noopener" href="https://kalacloud.com/blog/how-to-import-and-export-excel-csv-in-mysql-from-terminal/">如何在 MySQL 中导入和导出 CSV / Excel 文件</a></li>
+</ul>
+<p>如果我的文章对你有帮助，还请点个赞再走，任何问题欢迎一起交流。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/suminwen/suminwen.github.io/master/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/29/open_source/" class="archive-article-date">
-  	<time datetime="2021-11-29T03:20:11.771Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/29/open_source/">Go 常见开源库</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://suminwen.github.io/2022/05/31/free_api/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/29/rpc_timeout/" class="archive-article-date">
-  	<time datetime="2021-11-29T03:19:10.375Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-29</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2022/05/31/go_rabbitmq/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ubuntu 20.04安装rabbitmq教程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/29/open_source/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Go 常见开源库</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/29/rpc_timeout/">微服务超时处理</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/04/go_share_tool/" class="archive-article-date">
-  	<time datetime="2021-11-04T06:04:13.515Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/04/go_share_tool/">高效的在线工具</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/04/go_common_tool/" class="archive-article-date">
-  	<time datetime="2021-11-04T05:44:37.619Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/04/go_common_tool/">Go 日常开发常备第三方库和工具</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/03/go_semver/" class="archive-article-date">
-  	<time datetime="2021-11-03T02:15:11.287Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/03/go_semver/">golang 的 semver版本控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/02/go_map_sort/" class="archive-article-date">
-  	<time datetime="2021-11-02T03:50:43.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/02/go_map_sort/">map 排序_Go语言中的排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/01/go_cron/" class="archive-article-date">
-  	<time datetime="2021-11-01T10:09:12.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/01/go_cron/">Go定时任务库：cron</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/11/01/go_rand/" class="archive-article-date">
-  	<time datetime="2021-11-01T09:27:42.464Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/11/01/go_rand/">go-rand随机数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -531,8 +655,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
