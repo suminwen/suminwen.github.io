@@ -188,6 +188,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-go_rand" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/01/go_rand/">go-rand随机数</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/01/go_rand/" class="archive-article-date">
+  	<time datetime="2021-11-01T09:27:42.464Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="添加随机种子-rand-Seed-time-Now-UnixNano-，获取到的值范围80-100的随机数"><a href="#添加随机种子-rand-Seed-time-Now-UnixNano-，获取到的值范围80-100的随机数" class="headerlink" title="添加随机种子 rand.Seed(time.Now().UnixNano()) ，获取到的值范围80~100的随机数"></a>添加随机种子 rand.Seed(time.Now().UnixNano()) ，获取到的值范围80~100的随机数</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">   &quot;fmt&quot;</span><br><span class="line">   &quot;math/rand&quot;</span><br><span class="line">   &quot;sync&quot;</span><br><span class="line">   &quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">   num := 100</span><br><span class="line">   for j := 0; j &lt; num; j++ &#123;</span><br><span class="line">      res := getRand(num)</span><br><span class="line">      fmt.Println(&quot;获取到的随机数是：&quot;,res)</span><br><span class="line">      time.Sleep(1)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func getRand(num int) int32 &#123;</span><br><span class="line">   rand.Seed(time.Now().UnixNano())</span><br><span class="line">   var mu sync.Mutex</span><br><span class="line">   mu.Lock()</span><br><span class="line">   v := int32(rand.Intn((num - 80 + 1)) + 80)</span><br><span class="line">   mu.Unlock()</span><br><span class="line">   return v</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/01/go_rand/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-FIND_IN_SET" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
